@@ -28,10 +28,10 @@ class NewsListContainer extends Component {
   render() {
     const { news, loading } = this.state;
     return (
-      <div>
+      <div className="container">
         <h1>News List</h1>
         {loading ? (
-          <h1>Loading...</h1>
+          <div className="loading"></div>
         ) : (
           <NewsList news={news} onSelect={this.props.onSelect} />
         )}

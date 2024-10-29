@@ -2,7 +2,7 @@ import React from "react"
 
 function NewsDetail ({ detail }) {
     return (
-        <div>
+        <div className="detail">
             <h2>{detail.title}</h2>
             <div>
                 {

@@ -22,15 +22,18 @@ class NewsDetailContainer extends Component {
       });
     } catch (error) {
       console.error(error);
-      this.setState({loading: false})
+      this.setState({ loading: false });
     }
   }
 
   render() {
     return (
-      <div>
-        <h1>News Detail</h1>
-        {this.state.loading ? <h1>Loading...</h1> : <NewsDetail detail={this.state.detail}/>}
+      <div className="container">
+        {this.state.loading ? (
+          <div className="loading"></div>
+        ) : (
+          <NewsDetail detail={this.state.detail} />
+        )}
       </div>
     );
   }
